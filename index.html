@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whac a Mole</title>
+    <link rel="stylesheet" href="mole.css">
+</head>
+<body>
+    <h1>Whac a Mole</h1>
+    <h2 id="score">0</h2>
+    <!-- 3x3 -->
+    <div id="board">
+    </div>
+
+
+    <audio id="bgMusic" loop autoplay>
+        <source src="1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <button id="startBtn" class="button-33" role="button">Start</button>
+
+    <script src="mole.js" defer></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.getElementById("startBtn").addEventListener("click", function() {
+                setGame(); // Call setGame() when the button is clicked
+                document.getElementById("startBtn").disabled = true; // Disable the button after starting the game
+            });
+        });
+
+        // Play background music when the website is loaded
+    </script>
+</body>
+</html>
